@@ -17,7 +17,7 @@ const Hero = () => {
                         <span className='text-base font-medium bg-brand-gradient bg-clip-text text-transparent'>New: AI-Powered Tools Available</span>
                     </div>
 
-                    <h2 className='text-text-primary text-[4.5rem] font-extrabold leading-[1.11] mb-4'>Supercharge Your
+                    <h2 className='text-text-primary text-[4.5rem] font-extrabold leading-tight mb-4'>Supercharge Your
                         Digital Workflow</h2>
 
                     <p className='text-text-secondary text-[1.125rem] font-normal leading-8 mb-8'>Access premium AI tools, design assets, templates, and productivity<br />software—all in one place. Start creating faster today.<br />Explore Products
