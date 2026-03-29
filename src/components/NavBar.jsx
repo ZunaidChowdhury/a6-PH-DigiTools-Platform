@@ -5,7 +5,7 @@ import cartImg from '../assets/products/shopping-cart.png'
 const NavBar = () => {
   return (
     // wrapper 
-    <div className='w-full py-4 bg-background shadow-sm'>
+    <div className='w-full py-4 bg-background border-b border-gray-100'>
         {/* container */}
         <div className='max-w-300 mx-auto flex items-center justify-between'>
           {/* brand logo */}
