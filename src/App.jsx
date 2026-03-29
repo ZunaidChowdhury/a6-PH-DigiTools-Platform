@@ -1,7 +1,12 @@
 import './App.css'
+import ProductsList from './sections/ProductsList'
 import Hero from './components/Hero'
 import NavBar from './components/NavBar'
 import Stats from './components/Stats'
+import GetStarted from './sections/GetStarted'
+import Pricing from './sections/Pricing'
+import Transform from './sections/Transform'
+import Footer from './sections/Footer'
 
 function App() {
   return (
@@ -9,6 +14,11 @@ function App() {
       <NavBar/>
       <Hero/>
       <Stats/>
+      <ProductsList/>
+      <GetStarted />
+      <Pricing />
+      <Transform />
+      <Footer />
     </div>
   )
 }
