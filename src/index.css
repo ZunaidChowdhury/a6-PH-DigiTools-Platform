@@ -30,11 +30,13 @@ html {
 
 
 :root {
-    --background: #f8fafc;
-    --surface: #ffffff;
-    --theme-primary: #4a00ff;
-    --text-primary: #1f2937;
-    --text-secondary: #64748b;
+    --background: white;
+    /* --surface: #ffffff; */
+    /* --theme-primary: #4a00ff; */
+    --text-primary: #101727;
+    ;
+    --text-secondary: #627382;
+    ;
 }
 
 @theme {
@@ -50,8 +52,9 @@ html {
     --color-theme-primary: var(--theme-primary);
     --color-text-primary: var(--text-primary);
     --color-text-secondary: var(--text-secondary);
+
+
+    --background-image-brand-gradient: linear-gradient(to right,
+            rgba(79, 57, 246, 1) 0%,
+            rgba(149, 20, 250, 1) 100%);
 }
-
-
-
-
