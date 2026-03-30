@@ -9,6 +9,7 @@ import Transform from './sections/Transform'
 import Footer from './sections/Footer'
 import { Suspense } from 'react'
 import { getProducts } from './api/products'
+import Cart from './sections/Cart'
 
 const productsListPromise =  getProducts();
 
@@ -20,6 +21,7 @@ function App() {
       <Hero />
       <Stats />
       <Suspense fallback={<div className="text-center p-20">Loading...</div>}>
+
       <ProductsList productsListPromise={productsListPromise} />
       </Suspense>
       <GetStarted />

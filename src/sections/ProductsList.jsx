@@ -1,5 +1,6 @@
 import React, { use } from 'react'
 import ProductCard from '../components/cards/ProductCard';
+import Cart from './Cart';
 // import productImg from "../assets/products/design-tool.png";
 
 const activeTab = `text-white text-base font-bold py-3 px-6 bg-brand-gradient rounded-full cursor-pointer`;
@@ -28,6 +29,10 @@ const ProductsList = ({ productsListPromise }) => {
                         <button className='text-[#25065d] text-base font-medium py-3 px-6  rounded-full cursor-pointer'>Cart (2)</button>
                     </div>
                 </div>
+
+
+                      <Cart />
+
 
                 {/* card container */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
