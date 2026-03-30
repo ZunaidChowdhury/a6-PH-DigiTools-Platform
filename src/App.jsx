@@ -7,14 +7,21 @@ import GetStarted from './sections/GetStarted'
 import Pricing from './sections/Pricing'
 import Transform from './sections/Transform'
 import Footer from './sections/Footer'
+import { Suspense } from 'react'
+import { getProducts } from './api/products'
+
+const productsListPromise =  getProducts();
+
 
 function App() {
   return (
     <div>
-      <NavBar/>
-      <Hero/>
-      <Stats/>
-      <ProductsList/>
+      <NavBar />
+      <Hero />
+      <Stats />
+      <Suspense fallback={<div className="text-center p-20">Loading...</div>}>
+      <ProductsList productsListPromise={productsListPromise} />
+      </Suspense>
       <GetStarted />
       <Pricing />
       <Transform />
