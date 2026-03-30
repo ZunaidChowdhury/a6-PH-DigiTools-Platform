@@ -1,7 +1,7 @@
 import React from 'react'
 
 const StepsCard = ({ step }) => {
-    console.log(step);
+    // console.log(step);
 
     return (
         <div className=' h-95 relative bg-background border-2 border-[#f2f2f2] rounded-2xl p-6 space-y-4 flex flex-col items-center justify-center'>
