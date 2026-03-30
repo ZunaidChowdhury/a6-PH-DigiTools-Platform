@@ -1,8 +1,8 @@
 import React from 'react'
 
-const ProductCard = ({product}) => {
+const ProductCard = ({product, addToCart}) => {
     return (
-        <div className='relative bg-background border-2 border-[#f2f2f2] rounded-2xl p-6 space-y-4'>
+        <div className='relative bg-background border-2 border-[#f2f2f2] rounded-2xl p-6 space-y-4 flex flex-col'>
             {/* badge */}
             <div className={`absolute top-2 right-2 ${product.tagType === 'best seller' ? 'bg-[#fef3c6]' : product.tagType === 'popular' ? 'bg-[#e1e7ff]' : 'bg-[#dbfce7]'} rounded-full p-0.5 px-3 w-fit`}>
                 <span className={`${product.tagType === 'best seller' ? 'text-[#bb4d00]' : product.tagType === 'popular' ? 'bg-brand-gradient bg-clip-text text-transparent' : 'text-[#0a883e]'} text-sm font-medium`}>{product.tag}</span>
@@ -27,7 +27,7 @@ const ProductCard = ({product}) => {
             </div>
 
 
-            <ul className="space-y-2">
+            <ul className="space-y-2 grow">
                 {product.features.map((text, i) => (
                     <li key={i} className="flex items-center gap-3">
                         {/* SVG Checkmark icon */}
@@ -44,7 +44,11 @@ const ProductCard = ({product}) => {
             </ul>
 
 
-            <button className='w-full text-white text-base font-bold py-3 px-4 bg-brand-gradient rounded-full cursor-pointer'>Buy Now</button>
+            <button
+                onClick={()=> {addToCart(product)}} 
+                className='w-full text-white text-base font-bold py-3 px-4 bg-brand-gradient rounded-full cursor-pointer'>
+                    Buy Now
+            </button>
         </div>
     )
 }

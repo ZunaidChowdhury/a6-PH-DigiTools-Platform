@@ -11,15 +11,14 @@ const footerLinksData = [
 ];
 
 const RenderQuickItem = ({ item }) => {
-    console.log(item);
 
     return (
         <div className='space-y-4 mt-4'>
             <h2 className='text-white text-lg font-medium'>{item.label}</h2>
             <ul className='space-y-4'>
                 {
-                    item.items.map(item => (
-                        <li className='text-white opacity-70 hover:opacity-100 transition-all duration-300 text-base font-normal'><a href="#">{item}</a></li>
+                    item.items.map((item, i) => (
+                        <li key={i} className='text-white opacity-70 hover:opacity-100 transition-all duration-300 text-base font-normal'><a href="#">{item}</a></li>
                     ))
                 }
             </ul>

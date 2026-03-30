@@ -2,10 +2,10 @@ import React from 'react'
 import brandLogo from '../assets/digitools.webp'
 import cartImg from '../assets/products/shopping-cart.png'
 
-const NavBar = () => {
+const NavBar = ({cartItems}) => {
   return (
     // wrapper 
-    <div className='w-full py-4 bg-background border-b border-gray-100'>
+    <div className='sticky top-0 z-100 w-full py-4 bg-background border-b border-gray-100'>
         {/* container */}
         <div className='max-w-300 mx-auto flex items-center justify-between'>
           {/* brand logo */}
@@ -27,7 +27,7 @@ const NavBar = () => {
             {/* cart */}
             <div className='w-4 cursor-pointer relative'>
               <img  src={cartImg} alt="shopping cart" />
-              <div className='absolute -top-2 -right-2 w-4 h-4 bg-red-500 rounded-full flex items-center justify-center'><span className='text-white text-[.625rem]'>1</span></div>
+              {cartItems.length > 0 ? <div className='absolute -top-2 -right-2 w-4 h-4 bg-red-500 rounded-full flex items-center justify-center'><span className='text-white text-[.625rem]'>{cartItems.length}</span></div> : null}
             </div>
             <button className='text-text-primary text-base font-semibold cursor-pointer'>Log In</button>
             <button className='text-white text-base font-semibold py-3 px-4 bg-brand-gradient rounded-full cursor-pointer'>Get Started</button>
