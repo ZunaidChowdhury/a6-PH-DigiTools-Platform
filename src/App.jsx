@@ -11,6 +11,9 @@ import { Suspense, useState } from 'react'
 import { getProducts } from './api/products'
 import Cart from './sections/Cart'
 
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const productsListPromise = getProducts();
 
 
@@ -36,29 +39,33 @@ function App() {
     const existingItem = cartItems.filter(item => item.id === cartItem.id);
 
     // console.log('existingItem: ', existingItem);
-    
+
     if (existingItem.length > 0) {
-      alert('Item exists!');
+      toast.error('Item already added to cart!');
       // cartItem.quantity = existingItem[0].quantity + 1;
       // const filteredCartItems = cartItems.filter(item => item.id !== cartItem.id);
       // setCartItems([...filteredCartItems, cartItem]);
     }
     else {
       setCartItems([...cartItems, cartItem]);
+      toast("Item added to cart.");
     }
   };
 
   const removeFromCart = (item) => {
     const filteredCartItems = cartItems.filter(cartItem => cartItem.id !== item.id);
     setCartItems(filteredCartItems);
+    toast("Item removed from cart.");
   }
 
   const processCheckout = () => {
     setCartItems([]);
+    toast.success("Checkout successful!");
   }
 
   return (
     <div>
+
       <NavBar cartItems={cartItems} />
       <Hero />
       <Stats />
@@ -70,6 +77,11 @@ function App() {
       <Pricing />
       <Transform />
       <Footer />
+      <ToastContainer
+        position="bottom-left"
+        theme="dark"
+      />
+
     </div>
   )
 }
