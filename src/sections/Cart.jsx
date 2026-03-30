@@ -1,5 +1,5 @@
 import React from 'react'
-import testImg from "../assets/products/writing_2327400 1.png";
+// import testImg from "../assets/products/writing_2327400 1.png";
 
 const Cart = ({ cartItems, processCheckout, removeFromCart }) => {
 
