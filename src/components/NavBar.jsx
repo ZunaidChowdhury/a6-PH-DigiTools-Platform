@@ -16,7 +16,7 @@ const NavBar = ({ cartItems, setCurrentTab }) => {
     // wrapper 
     <div className='sticky top-0 z-100 w-full py-4 bg-background border-b border-gray-100'>
       {/* container */}
-      <div className='max-w-300 mx-auto flex items-center justify-between px-6 xl:px-0'>
+      <div className='max-w-300 mx-auto flex items-center justify-between px-4 xl:px-0'>
         {/* brand logo */}
         <a href="/" className='w-32 tablet:w-45 shrink-0'>
           <img src={brandLogo} alt="site logo" />

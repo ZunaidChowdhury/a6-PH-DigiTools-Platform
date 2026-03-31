@@ -2,8 +2,8 @@ import React from 'react'
 
 const Transform = () => {
     return (
-        <div className='w-full py-30 bg-brand-gradient'>
-            <div className='max-w-300 mx-auto'>
+        <div className='w-full py-10 tablet:py-30 bg-brand-gradient'>
+            <div className='max-w-300 mx-auto px-4 xl:px-0'>
                 {/* section heading  */}
                 <div className='text-center'>
                     <h3 className='text-white text-[3rem] font-extrabold mb-4 leading-tight'>Ready to Transform Your Workflow?</h3>

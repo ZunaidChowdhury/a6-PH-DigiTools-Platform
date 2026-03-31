@@ -28,8 +28,8 @@ const RenderQuickItem = ({ item }) => {
 
 const Footer = () => {
     return (
-        <footer className='w-full pt-30 pb-7.5 bg-[#101727]'>
-            <div className='max-w-300 mx-auto '>
+        <footer className='w-full pt-10 tablet:pt-30 pb-7.5 bg-[#101727]'>
+            <div className='max-w-300 mx-auto px-4 xl:px-0'>
 
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-20'>
                     {/* brand info */}

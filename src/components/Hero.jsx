@@ -8,7 +8,7 @@ const Hero = () => {
         // wrapper 
         <div className='w-full py-10 tablet:py-15 bg-background'>
             {/* container  */}
-            <div className='max-w-300 mx-auto px-6 xl:px-0 grid grid-cols-1 lg:grid-cols-[minmax(0,40rem)_minmax(0,31.25rem)]  gap-15'>
+            <div className='max-w-300 mx-auto px-4 xl:px-0 grid grid-cols-1 lg:grid-cols-[minmax(0,40rem)_minmax(0,31.25rem)]  gap-15'>
                 {/* left  */}
                 <div className='w-full max-w-160 '>
                     {/* signal  */}
