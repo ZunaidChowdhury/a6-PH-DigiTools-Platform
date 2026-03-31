@@ -62,12 +62,12 @@ const Pricing = () => {
             <div className='max-w-300 mx-auto px-4 xl:px-0'>
                 {/* section heading  */}
                 <div className='text-center'>
-                    <h3 className='text-text-primary text-[3rem] font-extrabold mb-4 leading-tight'>Simple, Transparent Pricing</h3>
+                    <h3 className='text-text-primary text-[2.5rem] tablet:text-[3rem] font-extrabold mb-4 leading-tight'>Simple, Transparent Pricing</h3>
                     <p className='text-text-secondary text-base font-normal leading-tight'>Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
                 </div>
 
                 {/* card container */}
-                <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-7">
+                <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
                     {
                         pricingCardData.map((pricingCard, i) => (
                             // each card

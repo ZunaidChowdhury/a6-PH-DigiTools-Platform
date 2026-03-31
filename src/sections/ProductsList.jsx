@@ -19,7 +19,7 @@ const ProductsList = ({ productsListPromise, addToCart, cartItems, processChecko
             <div className='max-w-300 mx-auto px-4 xl:px-0'>
                 {/* section heading  */}
                 <div className='text-center'>
-                    <h3 className='text-text-primary text-[3rem] font-extrabold mb-4 leading-tight'>Premium Digital Tools</h3>
+                    <h3 className='text-text-primary text-[2.5rem] tablet:text-[3rem] font-extrabold mb-4 leading-tight'>Premium Digital Tools</h3>
                     <p className='text-text-secondary text-base font-normal mb-4 leading-tight'>Choose from our curated collection of premium digital products designed<br />
                         to boost your productivity and creativity.</p>
                 </div>
@@ -37,7 +37,7 @@ const ProductsList = ({ productsListPromise, addToCart, cartItems, processChecko
 
                 {
                     currentTab === 'products' ? (
-                        < div className="grid grid-cols-1 md:grid-cols-3 gap-7">
+                        < div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
                             {
                                 productsListData.map((product) => (
                                     // each card

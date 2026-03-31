@@ -1,16 +1,62 @@
-# React + Vite
+# 🚀 DigiTools Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is an assignment project of MERN stack course in programming hero batch 13.
 
-Currently, two official plugins are available:
+DigiTools Platform is a sleek, fully responsive e-commerce marketplace designed for purchasing premium digital products. From AI writing assistants to design templates, this platform provides a seamless "browse-to-buy" experience with a focus on modern UI/UX and smooth user interactions.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Live on Netlify - https://digitools-platform-zunaid.netlify.app/
+<br/>
+<br/>
 
-## React Compiler
+## 🛠️ Technology Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Frontend: React.js
 
-## Expanding the ESLint configuration
+### Styling: Tailwind CSS (for modern, utility-first styling)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Notifications: React-Toastify (for real-time user feedback)
+
+### Icons: HeroIcons
+
+### Deployment: Netlify
+
+<br/>
+<br/>
+
+## ✨ Key Features
+
+### 1. 🛒 Interactive Cart Management
+
+Users can easily add digital tools to their shopping cart or remove them with a single click. The cart state is managed efficiently to ensure a smooth shopping experience.
+
+### 2. 📱 Fully Responsive Design
+
+The platform is built with a mobile-first approach. Whether you are on a 4K monitor or a smartphone, the grid layouts (using grid-cols-2, grid-cols-3, etc.) and typography adapt perfectly to any screen size.
+
+### 3. ✅ Simplified Checkout Flow
+
+Experience a "one-click" checkout process. Upon clicking the checkout button, the system automatically clears the cart and triggers a "Purchase Complete" success toast via React-Toastify, simulating a real-world transaction flow without the complexity of payment gateways.
+
+<br/>
+<br/>
+
+
+## 🚀 How to Run Locally
+
+Clone the repository:
+
+1. git clone https://github.com
+2. Install dependencies:
+   npm install
+3. Start the development server:
+   npm run dev
+   
+<br/>
+<br/>
+
+
+# Desktop Version
+
+<div align="center">
+  <img src="./full-shot-1.png" width="100%" alt="Completed project image" />
+</div>

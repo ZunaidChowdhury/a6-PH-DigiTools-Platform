@@ -9,7 +9,7 @@ const Cart = ({ cartItems, processCheckout, removeFromCart }) => {
     }, 0);
 
     return (
-        <div className=' bg-background border-2 border-[#f2f2f2] rounded-2xl p-10 space-y-6'>
+        <div className=' bg-background border-2 border-[#f2f2f2] rounded-2xl p-4 tablet:p-10 space-y-6'>
 
             {/* title */}
             <h3 className='text-text-primary text-2xl font-bold'>Your Cart</h3>
@@ -18,19 +18,19 @@ const Cart = ({ cartItems, processCheckout, removeFromCart }) => {
                 {/* each cart */}
                 {
                     cartItems.map(item => (
-                        <div key={item.id} className=' bg-[#f9fafc]  rounded-2xl p-5 flex items-center justify-between'>
+                        <div key={item.id} className=' bg-[#f9fafc]  rounded-2xl p-5 flex flex-col tablet:flex-row items-center justify-between'>
                             {/* cart item left */}
-                            <div className='flex gap-4'>
+                            <div className='flex flex-col tablet:flex-row items-center tablet:items-start gap-4'>
                                 <div className='w-15 h-15 border-2 border-gray-100 rounded-full flex items-center justify-center'>
                                     <img src={item.icon} />
                                 </div>
-                                <div>
+                                <div className=''>
                                     <h3 className='text-text-primary text-[1.25rem] font-semibold'>{item.name}</h3>
-                                    <p className='text-text-secondary text-base font-medium'>{item.price}</p>
+                                    <p className='text-text-secondary text-base font-medium text-center tablet:text-start'>{item.price}</p>
                                 </div>
                             </div>
                             {/* cart item right */}
-                            <button onClick={() => { removeFromCart(item) }} className='text-[#ff3980] text-base font-bold cursor-pointer'>Remove</button>
+                            <button onClick={() => { removeFromCart(item) }} className='mt-6 tablet:mt-0 text-[#ff3980] text-base font-bold cursor-pointer'>Remove</button>
                         </div>
                     ))
                 }

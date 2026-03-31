@@ -31,7 +31,7 @@ const Footer = () => {
         <footer className='w-full pt-10 tablet:pt-30 pb-7.5 bg-[#101727]'>
             <div className='max-w-300 mx-auto px-4 xl:px-0'>
 
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-20'>
+                <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 mb-20'>
                     {/* brand info */}
                     <div className='col-span-2'>
                         <h2 className='text-white text-[3rem] font-extrabold leading-tight mb-4'>DigiTools</h2>
@@ -67,9 +67,9 @@ const Footer = () => {
                 <div className='w-full h-px bg-background opacity-10' />
 
                 {/* bottom */}
-                <div className='mt-7.5  flex items-center justify-between'>
+                <div className='mt-7.5  flex flex-col-reverse md:flex-row items-center justify-between'>
                     <p className='text-white opacity-50 text-base font-normal'>© 2026 DigiTools. All rights reserved.</p>
-                    <ul className='flex items-center gap-8'>
+                    <ul className='flex flex-col mt:flex-row items-center gap-4 mt:gap-8 mb-4 md:mb-0'>
                         <li><a className='text-white opacity-50 text-base font-normal hover:opacity-100 transition-all duration-300' href="#">Privacy Policy</a></li>
                         <li><a className='text-white opacity-50 text-base font-normal hover:opacity-100 transition-all duration-300' href="#">Terms of Service</a></li>
                         <li><a className='text-white opacity-50 text-base font-normal hover:opacity-100 transition-all duration-300' href="#">Cookies</a></li>
