@@ -4,7 +4,8 @@ const PriceCard = ({ pricingCard }) => {
     // console.log(pricingCard);
 
     return (
-        <div className={`relative ${pricingCard.tagType === 'popular' ? 'bg-brand-gradient' : 'bg-background'}  border-2 border-[#f2f2f2] rounded-2xl p-6 space-y-4 flex flex-col`}>
+        <div className={`relative ${pricingCard.tagType === 'popular' ? 'bg-brand-gradient' : 'bg-background'}  border-2 border-[#f2f2f2] 
+        rounded-2xl p-6 space-y-4 flex flex-col hover:scale-101 hover:shadow-lg transition-all duration-300`}>
 
             {pricingCard.tag && <div className={`absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#fef3c6] rounded-full p-0.5 px-3 w-fit`}>
                 <span className={`text-[#bb4d00] text-sm font-medium whitespace-nowrap`}>{pricingCard.tag}</span>

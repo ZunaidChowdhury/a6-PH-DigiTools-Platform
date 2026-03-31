@@ -1,8 +1,11 @@
 import React from 'react'
 
+
 const Stats = () => {
+
     return (
-        <div className='w-full py-15 bg-brand-gradient'>
+        <div  className='w-full py-15 bg-brand-gradient'>
+
             <div className='max-w-300 mx-auto flex items-center flex-wrap'>
                 <div className='flex flex-col items-center justify-center flex-1'>
                     <h3 className='text-white text-[3.75rem] font-extrabold leading-tight mb-3'>50K+</h3>

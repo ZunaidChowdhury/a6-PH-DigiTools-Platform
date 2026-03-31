@@ -1,5 +1,6 @@
 import React from 'react'
 // import testImg from "../assets/products/writing_2327400 1.png";
+import cartImg from '../assets/products/empty-cart.png';
 
 const Cart = ({ cartItems, processCheckout, removeFromCart }) => {
 
@@ -29,20 +30,32 @@ const Cart = ({ cartItems, processCheckout, removeFromCart }) => {
                                 </div>
                             </div>
                             {/* cart item right */}
-                            <button onClick={() => {removeFromCart(item)}} className='text-[#ff3980] text-base font-bold cursor-pointer'>Remove</button>
+                            <button onClick={() => { removeFromCart(item) }} className='text-[#ff3980] text-base font-bold cursor-pointer'>Remove</button>
                         </div>
                     ))
                 }
 
             </div>
 
-            {/* total */}
-            <div className='flex items-center justify-between'>
-                <p className='text-text-secondary text-base font-normal'>Total:</p>
-                <h3 className='text-text-primary text-2xl font-bold'>${total.toFixed(2)}</h3>
-            </div>
-            {/* checkout button */}
-            <button onClick={() => {processCheckout()}} className='w-full text-white text-base font-bold py-3 px-4 bg-brand-gradient rounded-full cursor-pointer'>Proceed to Checkout</button>
+
+            {
+                cartItems.length === 0 ? <div className='flex flex-col items-center justify-center'>
+                    <div className='w-30 mb-6'>
+                        <img width='100%' src={cartImg} alt="" />
+                    </div>
+                    <p className='text-text-secondary text-base font-medium text-center'>Your cart is empty.</p>
+                    <p className='text-text-secondary text-base font-normal text-center'>Add items to the Cart.</p>
+                </div> :
+                    <div className='space-y-6'>
+                        {/* total */}
+                        <div className='flex items-center justify-between'>
+                            <p className='text-text-secondary text-base font-normal'>Total:</p>
+                            <h3 className='text-text-primary text-2xl font-bold'>${total.toFixed(2)}</h3>
+                        </div>
+                        {/* checkout button */}
+                        <button onClick={() => { processCheckout() }} className='w-full text-white text-base font-bold py-3 px-4 bg-brand-gradient rounded-full cursor-pointer'>Proceed to Checkout</button>
+                    </div>
+            }
         </div>
     )
 }

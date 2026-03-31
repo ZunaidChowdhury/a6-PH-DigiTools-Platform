@@ -17,14 +17,34 @@ const Hero = () => {
                         <span className='text-base font-medium bg-brand-gradient bg-clip-text text-transparent'>New: AI-Powered Tools Available</span>
                     </div>
 
-                    <h2 className='text-text-primary text-[4.5rem] font-extrabold leading-tight mb-4'>Supercharge Your
+                    <h2 className='text-text-primary text-[4.5rem] font-extrabold leading-tight mb-4'><span className='bg-brand-gradient bg-clip-text text-transparent'>Supercharge</span> Your
                         Digital Workflow</h2>
 
                     <p className='text-text-secondary text-[1.125rem] font-normal leading-8 mb-8'>Access premium AI tools, design assets, templates, and productivity<br />software—all in one place. Start creating faster today.<br />Explore Products
                     </p>
 
                     <div className='flex items-center gap-4'>
-                        <button className='text-white text-base font-bold py-3 px-4 bg-brand-gradient rounded-full cursor-pointer'>Explore Products</button>
+                        <button className='text-white text-base font-bold py-3 px-4 bg-brand-gradient rounded-full cursor-pointer flex items-center gap-2'>
+                            Explore Products
+                            <svg
+                                xmlns="http://w3.org"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                strokeWidth={1.5}
+                                stroke="currentColor"
+                                className="size-6"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                                />
+                            </svg>
+
+
+
+
+                        </button>
                         <button className="bg-brand-gradient rounded-full p-[1px] cursor-pointer">
                             {/* The 'p-[1px]' determines the border thickness */}
                             <div className="bg-white transition-colors rounded-full px-4 py-3 flex items-center gap-2">

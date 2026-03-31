@@ -67,12 +67,12 @@ const Footer = () => {
                 <div className='w-full h-px bg-background opacity-10' />
 
                 {/* bottom */}
-                <div className='mt-7.5 text-white opacity-50 text-base font-normal flex items-center justify-between'>
-                    <p>© 2026 DigiTools. All rights reserved.</p>
+                <div className='mt-7.5  flex items-center justify-between'>
+                    <p className='text-white opacity-50 text-base font-normal'>© 2026 DigiTools. All rights reserved.</p>
                     <ul className='flex items-center gap-8'>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Cookies</a></li>
+                        <li><a className='text-white opacity-50 text-base font-normal hover:opacity-100 transition-all duration-300' href="#">Privacy Policy</a></li>
+                        <li><a className='text-white opacity-50 text-base font-normal hover:opacity-100 transition-all duration-300' href="#">Terms of Service</a></li>
+                        <li><a className='text-white opacity-50 text-base font-normal hover:opacity-100 transition-all duration-300' href="#">Cookies</a></li>
                     </ul>
                 </div>
             </div>

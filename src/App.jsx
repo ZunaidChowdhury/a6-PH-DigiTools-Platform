@@ -11,16 +11,21 @@ import { Suspense, useState } from 'react'
 import { getProducts } from './api/products'
 import Cart from './sections/Cart'
 
+
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const productsListPromise = getProducts();
 
 
+
+
+
+
 function App() {
 
   const [cartItems, setCartItems] = useState([]);
-
+  const [currentTab, setCurrentTab] = useState('products');
 
 
 
@@ -66,13 +71,19 @@ function App() {
   return (
     <div>
 
-      <NavBar cartItems={cartItems} />
+      <NavBar cartItems={cartItems} setCurrentTab={setCurrentTab} />
       <Hero />
       <Stats />
       <Suspense fallback={<div className="w-full h-75 p-20 flex items-center- justify-center">
         <span className="loading loading-spinner loading-xl text-primary"></span></div>}>
 
-        <ProductsList productsListPromise={productsListPromise} addToCart={addToCart} cartItems={cartItems} processCheckout={processCheckout} removeFromCart={removeFromCart} />
+        <ProductsList productsListPromise={productsListPromise} 
+                      addToCart={addToCart} 
+                      cartItems={cartItems} 
+                      processCheckout={processCheckout} 
+                      removeFromCart={removeFromCart}
+                      currentTab={currentTab}
+                      setCurrentTab={setCurrentTab} />
       </Suspense>
       <GetStarted />
       <Pricing />

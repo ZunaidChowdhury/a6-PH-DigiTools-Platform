@@ -1,8 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
-const ProductCard = ({product, addToCart}) => {
+const ProductCard = ({product, addToCart, cartItems}) => {
+    const [addedToCart, setAddedToCart] = useState(false);
+    useEffect(() => {
+        const existingItem = cartItems.filter(item => item.id === product.id);
+        if(existingItem.length > 0) {
+            setAddedToCart(true);
+        }
+        else {
+            setAddedToCart(false);
+        }
+    }, [])
     return (
-        <div className='relative bg-background border-2 border-[#f2f2f2] rounded-2xl p-6 space-y-4 flex flex-col'>
+        <div className='relative bg-background border-2 border-[#f2f2f2] rounded-2xl p-6 space-y-4 flex flex-col hover:scale-101 hover:shadow-lg transition-all duration-300'>
             {/* badge */}
             <div className={`absolute top-2 right-2 ${product.tagType === 'best seller' ? 'bg-[#fef3c6]' : product.tagType === 'popular' ? 'bg-[#e1e7ff]' : 'bg-[#dbfce7]'} rounded-full p-0.5 px-3 w-fit`}>
                 <span className={`${product.tagType === 'best seller' ? 'text-[#bb4d00]' : product.tagType === 'popular' ? 'bg-brand-gradient bg-clip-text text-transparent' : 'text-[#0a883e]'} text-sm font-medium`}>{product.tag}</span>
@@ -45,9 +55,9 @@ const ProductCard = ({product, addToCart}) => {
 
 
             <button
-                onClick={()=> {addToCart(product)}} 
-                className='w-full text-white text-base font-bold py-3 px-4 bg-brand-gradient rounded-full cursor-pointer'>
-                    Buy Now
+                onClick={()=> {addToCart(product); setAddedToCart(true);}} 
+                className={`w-full text-white text-base font-bold py-3 px-4 ${addedToCart === true ? 'bg-green-500' : 'bg-brand-gradient'}  rounded-full cursor-pointer`}>
+                    {addedToCart === true ? 'Added to Cart' : 'Buy Now'}
             </button>
         </div>
     )

@@ -7,9 +7,9 @@ const activeTab = `text-white text-base font-bold py-3 px-6 bg-brand-gradient ro
 const inactiveTab = `text-[#25065d] text-base font-medium py-3 px-6  rounded-full cursor-pointer`;
 
 
-const ProductsList = ({ productsListPromise, addToCart, cartItems, processCheckout, removeFromCart }) => {
+const ProductsList = ({ productsListPromise, addToCart, cartItems, processCheckout, removeFromCart, currentTab, setCurrentTab }) => {
 
-    const [currentTab, setCurrentTab] = useState('products');
+
 
     const productsListData = use(productsListPromise);
     // console.log('data: ', productsListData);
@@ -27,10 +27,10 @@ const ProductsList = ({ productsListPromise, addToCart, cartItems, processChecko
                 {/* tab buttons */}
                 <div className='flex justify-center mb-10'>
                     <div className='bg-white border-2 border-gray-100 p-1 rounded-full w-fit'>
-                        <button onClick={() => {setCurrentTab('products')}} 
-                                className={currentTab === 'products' ? activeTab : inactiveTab}>Products</button>
-                        <button onClick={() => {setCurrentTab('cart')}} 
-                                className={currentTab === 'cart' ? activeTab : inactiveTab}>Cart ({cartItems.length})</button>
+                        <button onClick={() => { setCurrentTab('products') }}
+                            className={currentTab === 'products' ? activeTab : inactiveTab}>Products</button>
+                        <button onClick={() => { setCurrentTab('cart') }}
+                            className={currentTab === 'cart' ? activeTab : inactiveTab}>Cart ({cartItems.length})</button>
                     </div>
                 </div>
 
@@ -41,7 +41,7 @@ const ProductsList = ({ productsListPromise, addToCart, cartItems, processChecko
                             {
                                 productsListData.map((product) => (
                                     // each card
-                                    <ProductCard key={product.id} product={product} addToCart={addToCart} />
+                                    <ProductCard key={product.id} product={product} addToCart={addToCart} cartItems={cartItems} />
                                 ))
                             }
                         </div>) : currentTab === 'cart' ? <Cart cartItems={cartItems} processCheckout={processCheckout} removeFromCart={removeFromCart} /> : null
