@@ -69,7 +69,8 @@ function App() {
       <NavBar cartItems={cartItems} />
       <Hero />
       <Stats />
-      <Suspense fallback={<div className="text-center p-20">Loading...</div>}>
+      <Suspense fallback={<div className="w-full h-75 p-20 flex items-center- justify-center">
+        <span className="loading loading-spinner loading-xl text-primary"></span></div>}>
 
         <ProductsList productsListPromise={productsListPromise} addToCart={addToCart} cartItems={cartItems} processCheckout={processCheckout} removeFromCart={removeFromCart} />
       </Suspense>
