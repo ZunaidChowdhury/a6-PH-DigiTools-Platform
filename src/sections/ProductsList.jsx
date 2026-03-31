@@ -15,7 +15,7 @@ const ProductsList = ({ productsListPromise, addToCart, cartItems, processChecko
     // console.log('data: ', productsListData);
 
     return (
-        <div className='w-full py-30 bg-background'>
+        <div id='products' className='w-full py-30 bg-background'>
             <div className='max-w-300 mx-auto'>
                 {/* section heading  */}
                 <div className='text-center'>
