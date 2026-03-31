@@ -41,7 +41,7 @@ const Cart = ({ cartItems, processCheckout, removeFromCart }) => {
             {
                 cartItems.length === 0 ? <div className='flex flex-col items-center justify-center'>
                     <div className='w-30 mb-6'>
-                        <img width='100%' src={cartImg} alt="" />
+                        <img width='100%' src={cartImg} />
                     </div>
                     <p className='text-text-secondary text-base font-medium text-center'>Your cart is empty.</p>
                     <p className='text-text-secondary text-base font-normal text-center'>Add items to the Cart.</p>

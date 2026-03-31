@@ -40,6 +40,12 @@ html {
 
 @theme {
     /* Custom Breakpoints */
+    /* 320px */
+    --breakpoint-xxs: 20rem;
+    /* 380px    */
+    --breakpoint-xs: 23.75rem;
+    --breakpoint-st: 27.5rem;
+
     --breakpoint-tablet: 36rem;
     /* 576px */
     --breakpoint-desktop: 62rem;
