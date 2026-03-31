@@ -45,7 +45,7 @@ Experience a "one-click" checkout process. Upon clicking the checkout button, th
 
 Clone the repository:
 
-1. git clone https://github.com
+1. git clone https://github.com/ZunaidChowdhury/a6-PH-DigiTools-Platform
 2. Install dependencies:
    npm install
 3. Start the development server:
