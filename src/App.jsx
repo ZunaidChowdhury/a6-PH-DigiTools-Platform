@@ -14,6 +14,8 @@ import Cart from './sections/Cart'
 
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useRef } from 'react';
+
 
 const productsListPromise = getProducts();
 
@@ -24,6 +26,7 @@ const productsListPromise = getProducts();
 
 function App() {
 
+  const sectionRef = useRef(null);
   const [cartItems, setCartItems] = useState([]);
   const [currentTab, setCurrentTab] = useState('products');
 
@@ -68,22 +71,28 @@ function App() {
     toast.success("Checkout successful!");
   }
 
+  const scrollToCart = () => {
+    // Behavior "smooth" handles the animation for you
+    sectionRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div>
 
-      <NavBar cartItems={cartItems} setCurrentTab={setCurrentTab} />
+      <NavBar scrollToCart={scrollToCart} cartItems={cartItems} setCurrentTab={setCurrentTab} />
       <Hero />
       <Stats />
       <Suspense fallback={<div className="w-full h-75 p-20 flex items-center- justify-center">
         <span className="loading loading-spinner loading-xl text-primary"></span></div>}>
 
-        <ProductsList productsListPromise={productsListPromise} 
-                      addToCart={addToCart} 
-                      cartItems={cartItems} 
-                      processCheckout={processCheckout} 
-                      removeFromCart={removeFromCart}
-                      currentTab={currentTab}
-                      setCurrentTab={setCurrentTab} />
+        <ProductsList productsListPromise={productsListPromise}
+          addToCart={addToCart}
+          cartItems={cartItems}
+          processCheckout={processCheckout}
+          removeFromCart={removeFromCart}
+          currentTab={currentTab}
+          setCurrentTab={setCurrentTab}
+          sectionRef={sectionRef} />
       </Suspense>
       <GetStarted />
       <Pricing />

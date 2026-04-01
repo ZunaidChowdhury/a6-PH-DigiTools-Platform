@@ -9,7 +9,7 @@ const Cart = ({ cartItems, processCheckout, removeFromCart }) => {
     }, 0);
 
     return (
-        <div className=' bg-background border-2 border-[#f2f2f2] rounded-2xl p-4 tablet:p-10 space-y-6'>
+        <div  className=' bg-background border-2 border-[#f2f2f2] rounded-2xl p-4 tablet:p-10 space-y-6'>
 
             {/* title */}
             <h3 className='text-text-primary text-2xl font-bold'>Your Cart</h3>

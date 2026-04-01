@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import brandLogo from '../assets/digitools.webp'
 import cartImg from '../assets/products/shopping-cart.png'
 
+
 const navLinks = [
   { name: 'Products', href: '#products' },
   { name: 'Features', href: '/#products' },
@@ -10,7 +11,7 @@ const navLinks = [
   { name: 'FAQ', href: '/' }
 ];
 
-const NavBar = ({ cartItems, setCurrentTab }) => {
+const NavBar = ({ cartItems, setCurrentTab, scrollToCart }) => {
   const [openMobileNav, setOpenMobileNav] = useState(false);
   return (
     // wrapper 
@@ -53,7 +54,7 @@ const NavBar = ({ cartItems, setCurrentTab }) => {
         <div className='flex items-center justify-between gap-4'>
 
           {/* cart */}
-          <button onClick={() => { setCurrentTab('cart') }} className='hover:bg-gray-100 p-1.5 rounded-full transition-all duration-300'>
+          <button onClick={() => { scrollToCart(); setCurrentTab('cart');   }} className='hover:bg-gray-100 p-1.5 rounded-full transition-all duration-300'>
             <div className='w-4 cursor-pointer relative'>
               <img src={cartImg} alt="shopping cart" />
               {cartItems.length > 0 ? <div className='absolute -top-2 -right-2 w-4 h-4 bg-red-500 rounded-full flex items-center justify-center'><span className='text-white text-[.625rem]'>{cartItems.length}</span></div> : null}

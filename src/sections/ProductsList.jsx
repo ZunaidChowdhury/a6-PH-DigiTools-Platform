@@ -7,7 +7,7 @@ const activeTab = `text-white text-base font-bold py-3 px-6 bg-brand-gradient ro
 const inactiveTab = `text-[#25065d] text-base font-medium py-3 px-6  rounded-full cursor-pointer`;
 
 
-const ProductsList = ({ productsListPromise, addToCart, cartItems, processCheckout, removeFromCart, currentTab, setCurrentTab }) => {
+const ProductsList = ({ productsListPromise, addToCart, cartItems, processCheckout, removeFromCart, currentTab, setCurrentTab, sectionRef }) => {
 
 
 
@@ -15,7 +15,7 @@ const ProductsList = ({ productsListPromise, addToCart, cartItems, processChecko
     // console.log('data: ', productsListData);
 
     return (
-        <div id='products' className='w-full py-10 tablet:py-30 bg-background'>
+        <div ref={sectionRef} id='products' className='w-full py-10 tablet:py-30 bg-background'>
             <div className='max-w-300 mx-auto px-4 xl:px-0'>
                 {/* section heading  */}
                 <div className='text-center'>
@@ -25,7 +25,7 @@ const ProductsList = ({ productsListPromise, addToCart, cartItems, processChecko
                 </div>
 
                 {/* tab buttons */}
-                <div className='flex justify-center mb-10'>
+                <div  className='flex justify-center mb-10'>
                     <div className='bg-white border-2 border-gray-100 p-1 rounded-full w-fit'>
                         <button onClick={() => { setCurrentTab('products') }}
                             className={currentTab === 'products' ? activeTab : inactiveTab}>Products</button>
@@ -37,14 +37,14 @@ const ProductsList = ({ productsListPromise, addToCart, cartItems, processChecko
 
                 {
                     currentTab === 'products' ? (
-                        < div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
+                        < div  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
                             {
                                 productsListData.map((product) => (
                                     // each card
                                     <ProductCard key={product.id} product={product} addToCart={addToCart} cartItems={cartItems} />
                                 ))
                             }
-                        </div>) : currentTab === 'cart' ? <Cart cartItems={cartItems} processCheckout={processCheckout} removeFromCart={removeFromCart} /> : null
+                        </div>) : currentTab === 'cart' ? <Cart  sectionRef={sectionRef} cartItems={cartItems} processCheckout={processCheckout} removeFromCart={removeFromCart} /> : null
                 }
 
 
